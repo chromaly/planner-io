@@ -83,7 +83,7 @@ export function EventModal({isOpen, onClose, formData, updateField, onSubmit, ed
                     onChange={(val) => updateField("importance", val)}
                     options={[
                       { value: "very", label: "VERY." },
-                      { value: "somewhat!", label: "I shouldn't miss this!" },
+                      { value: "somewhat", label: "I shouldn't miss this!" },
                       { value: "not too", label: "um... there's this other thing..." },
                     ]}
                   />
