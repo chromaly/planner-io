@@ -1,8 +1,10 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { initializeApp } from "firebase/app"
+import { getFirestore } from "firebase/firestore"
+import { getAuth, GoogleAuthProvider } from "firebase/auth"
 
-import { getAI, getGenerativeModel, GoogleAIBackend, Schema } from "firebase/ai";
+import { getAI, getGenerativeModel, GoogleAIBackend, Schema } from "firebase/ai"
+
+import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBLN3fK1oadrrtPy7HLrTFGRGLdyZPVpOw",
@@ -15,6 +17,11 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig)
+
+initializeAppCheck(app, {provider: 
+  new ReCaptchaV3Provider("6Ld2SqQtAAAAAD6P6downQcLGOdTiKtpg3v-ddpD"),
+  isTokenAutoRefreshEnabled: true
+})
 
 if (import.meta.env.DEV) {
   self.FIREBASE_APPCHECK_DEBUG_TOKEN = true;

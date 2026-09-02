@@ -13,12 +13,12 @@
 
 .palette-tvgirl {
     --color-accent-1: #ff2e88;
-    --color-accent-2: #a020f0
+    --color-accent-2: #a020f0;
   }
 
   .palette-lalaland {
-    --color-accent-1: #170063;
-    --color-accent-2: #170063;
+    --color-accent-1: #FFB627;
+    --color-accent-2: #7B5EDB;
   }
 
   .dark {
